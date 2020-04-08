@@ -1,12 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './TopPanel.css';
+import {Link} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="TopPanel">
-     
-    </div>
+    <header className="TopPanel">
+      <div className="TopPanel-body">
+        <h3 className="TopPanel-h3">Calories Calculator</h3>
+        <nav className="TopPanel-nav">
+          <Link to="#" className="TopPanel-link">Story</Link>
+          <Link to="#" className="TopPanel-link">Products</Link>
+        </nav>
+      </div>
+
+    </header>
   );
 }
 
