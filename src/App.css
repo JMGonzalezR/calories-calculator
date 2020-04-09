@@ -1,5 +1,21 @@
+html,body{
+  height: 100%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+#root{
+  height: 100%;
+}
+
 .App {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
 }
 .App-logo {
   height: 40vmin;
@@ -25,6 +41,11 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.App-main{
+  flex: 1 0 auto;
+  display: flex;
 }
 
 @keyframes App-logo-spin {

@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-import TopPanel from './containers/TopPanel'
 import {
   BrowserRouter as Router,
   Route,
   Switch
 } from "react-router-dom";
-import HomePage from './pages/HomePage'
+import HomePage from './pages/HomePage';
+import TopPanel from './containers/TopPanel';
+import Footer from './containers/Footer';
 
 
 function App() {
@@ -14,11 +15,12 @@ function App() {
     <div className="App">
       <Router>
       <TopPanel />
-        <main>
+        <main className="App-main"> 
           <Switch>
             <Route path="/" exact component={HomePage} />
           </Switch>
         </main>
+      <Footer/>
       </Router>
     </div>
   );
