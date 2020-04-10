@@ -1,10 +1,10 @@
 .CalculatorForm{
-    height: 100%;
     background-color: #f57d34;
+    padding: 0 50px;
+    width: 100%;
 }
 
 .CalculatorForm-button{
-    width: 200px;
     height: 80px;
     border: 0;
     background-color: #000000;
@@ -12,4 +12,39 @@
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
+    flex-grow: 1;
+    margin-right: 10px;
+    min-width: 100px;
+}
+
+.CalculatorForm-h4{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.CalculatorForm-container{
+    display: flex;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.CalculatorForm-textinput{
+    flex-grow: 1;
+    margin-right: 10px;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid #dc661c;
+    background-color: #f57d34;
+    border-radius: 25px;
+}
+
+.CalculatorForm-textinput:focus{
+    background-color: #fff;
+}
+
+::placeholder {
+    color: #c1510d
 }

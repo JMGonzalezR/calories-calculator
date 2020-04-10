@@ -22,4 +22,5 @@
 
 .Home-rightside {
     width: 50%;
+    display: flex;
 }
