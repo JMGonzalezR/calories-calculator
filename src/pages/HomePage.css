@@ -1,0 +1,21 @@
+.Home {
+    width: 100%;
+    display: flex;
+}
+.Home-leftside {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.Home-h1 {
+    font-size: 5vw;
+}
+
+.Home-p{
+    width: 60%;
+}
