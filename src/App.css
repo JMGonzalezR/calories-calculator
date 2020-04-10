@@ -12,7 +12,7 @@ body{
 }
 
 .App {
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: 'Lato', sans-serif;
   display: flex;
   height: 100%;
   flex-direction: column;

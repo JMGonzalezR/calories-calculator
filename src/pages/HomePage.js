@@ -1,5 +1,6 @@
 import React from 'react';
-import './HomePage.css'
+import './HomePage.css';
+import CalculatorForm from '../components/CalculatorForm'
 
 function HomePage() {
   return (
@@ -12,7 +13,7 @@ function HomePage() {
         </p>
         </div>
         <div className="Home-rightside">
-
+            <CalculatorForm/>
         </div>
         
     </div>
