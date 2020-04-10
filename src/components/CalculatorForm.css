@@ -1,0 +1,15 @@
+.CalculatorForm{
+    height: 100%;
+    background-color: #f57d34;
+}
+
+.CalculatorForm-button{
+    width: 200px;
+    height: 80px;
+    border: 0;
+    background-color: #000000;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
