@@ -1,5 +1,7 @@
 import React from 'react';
 import './CalculatorForm.css';
+import './RadioButton';
+import RadioButton from './RadioButton';
 
 function CalculatorForm() {
     return (
@@ -17,14 +19,13 @@ function CalculatorForm() {
             <h4 className="CalculatorForm-h4">Activity Level</h4>
             <p>Lorem Ipsum</p>
             <div className="CalculatorForm-container">
-                <input type="radio" />
-                <label>Low</label>
-                <input type="radio" />
-                <label>Middle</label>
-                <input type="radio" />
-                <label>High</label>
-                <input type="radio" />
-                <label>Very High</label>
+                <RadioButton label="Low" name="activityLevel"/>
+                <hr/>
+                <RadioButton label="Middle" name="activityLevel" style={{marginLeft:'-7px'}}/>
+                <hr style={{marginLeft:'-7px'}}/>
+                <RadioButton label="High" name="activityLevel"/>
+                <hr/>
+                <RadioButton label="Very High" name="activityLevel" style={{marginLeft:'-17px'}}/>
             </div>
             <h4 className="CalculatorForm-h4">Goals</h4>
             <div className="CalculatorForm-container">

@@ -1,6 +1,6 @@
 .CalculatorForm{
     background-color: #f57d34;
-    padding: 0 50px;
+    padding: 70px 80px 0;
     width: 100%;
 }
 
@@ -15,6 +15,8 @@
     flex-grow: 1;
     margin-right: 10px;
     min-width: 100px;
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+    border-radius: 3px;
 }
 
 .CalculatorForm-h4{
@@ -27,7 +29,7 @@
 
 .CalculatorForm-container{
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
@@ -43,8 +45,21 @@
 
 .CalculatorForm-textinput:focus{
     background-color: #fff;
+    outline: none;
 }
 
 ::placeholder {
     color: #c1510d
+}
+
+hr{
+    flex-grow: 1;
+    height: 0px;
+    /* background-color: #dc661c; */
+    /* color: #dc661c; */
+    border-top: 1px solid #dc661c;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    margin: 15px 0 0 0;
 }
