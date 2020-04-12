@@ -35,7 +35,7 @@ function CalculatorForm() {
                 <button className="CalculatorForm-button"> Gain </button>
             </div>
             <div className="CalculatorForm-container">
-                <button className="CalculatorForm-button"> Calculate </button>
+                <button className="CalculatorForm-button CalculateButton"> <div className="CalculateButton-label">Calculate </div></button>
             </div>
         </div>
     );
