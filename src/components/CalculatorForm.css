@@ -4,9 +4,6 @@
     width: 100%;
 }
 
-
-
-
 .CalculatorForm-button{
     flex-grow: 0;
     transform: skew(-15deg);
@@ -51,6 +48,10 @@
     border: 1px solid #dc661c;
     background-color: #f57d34;
     border-radius: 25px;
+}
+
+.CalculatorForm-activityLevelText{
+    color:#fff
 }
 
 .CalculatorForm-textinput:focus{

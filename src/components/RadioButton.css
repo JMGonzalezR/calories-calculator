@@ -20,9 +20,16 @@
   }
 
   .RadioButton-label{
-    font-size: 15px;
-    color: #fff;
+    font-size: 13px;
+    color: #983d05;
     margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .RadioButton-label.active{
+    color: #fff;
   }
   
   /* Create a custom radio button */

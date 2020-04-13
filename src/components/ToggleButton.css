@@ -14,6 +14,7 @@
     min-width: 100px;
     border-radius: 3px;
     font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
 }
 
 .ToggleButton.active{

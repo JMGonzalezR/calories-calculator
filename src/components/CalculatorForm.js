@@ -10,18 +10,23 @@ function CalculatorForm() {
     const [activityLevelSelected, setActivityLevel] = useState('low');
     const [goalsSelected, setGoals] = useState('lose');
 
-    function genderChangeHandler(e)  {
+    const optionsActivityLevelText = {
+        low:"Low: Sendantary type of activity, it's everyday activity that includes walking, driving a car, working, eating, etc.",
+        middle:"Middle: Activity that burns an addiontional 400-650 calories for females or 500-800 calories doe males.",
+        high: "High: Spicy jalapeno bacon ipsum dolor amet beef ham hock picanha swine andouille ham, burgdoggen bacon.",
+        veryhigh: "Very High: Bacon ipsum dolor amet porchetta sirloin minim, labore burgdoggen chicken sint jowl. Brisket meatloaf kevin pork belly."
+    };
+
+    function genderChangeHandler(e) {
         setGender(e.target.value)
     }
 
-    function activityLevelChangeHandler(e)  {
+    function activityLevelChangeHandler(e) {
         setActivityLevel(e.target.value);
-        console.log(activityLevelSelected)
     }
 
-    function goalsChangeHandler(e)  {
+    function goalsChangeHandler(e) {
         setGoals(e.target.value)
-        console.log(goalsSelected)
     }
 
     return (
@@ -37,15 +42,15 @@ function CalculatorForm() {
                 <input type="text" className="CalculatorForm-textinput" placeholder="Height" />
             </div>
             <h4 className="CalculatorForm-h4">Activity Level</h4>
-            <p>Lorem Ipsum</p>
+            <p className="CalculatorForm-activityLevelText">{optionsActivityLevelText[activityLevelSelected]}</p>
             <div className="CalculatorForm-container">
-                <RadioButton label="Low" name="activityLevel" onChange={activityLevelChangeHandler} />
+                <RadioButton label="Low" value="low" name="activityLevel" isSelected={activityLevelSelected === "low"} onChange={activityLevelChangeHandler} />
                 <hr />
-                <RadioButton label="Middle" name="activityLevel" onChange={activityLevelChangeHandler} style={{ marginLeft: '-7px' }} />
+                <RadioButton label="Middle" value="middle" name="activityLevel" isSelected={activityLevelSelected === "middle"} onChange={activityLevelChangeHandler} style={{ marginLeft: '-7px' }} />
                 <hr style={{ marginLeft: '-7px' }} />
-                <RadioButton label="High" name="activityLevel" onChange={activityLevelChangeHandler}/>
+                <RadioButton label="High" value="high" name="activityLevel" isSelected={activityLevelSelected === "high"} onChange={activityLevelChangeHandler} />
                 <hr />
-                <RadioButton label="Very High" name="activityLevel" onChange={activityLevelChangeHandler} style={{ marginLeft: '-17px' }} />
+                <RadioButton label="Very High" value="veryhigh" name="activityLevel" isSelected={activityLevelSelected === "veryhigh"} onChange={activityLevelChangeHandler} style={{ marginLeft: '-17px' }} />
             </div>
             <h4 className="CalculatorForm-h4">Goals</h4>
             <div className="CalculatorForm-container">
