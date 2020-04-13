@@ -8,7 +8,7 @@ function CalculatorForm() {
         <div className="CalculatorForm">
             <h4 className="CalculatorForm-h4">Body Paramerets</h4>
             <div className="CalculatorForm-container">
-                <button className="CalculatorForm-button"> Male </button>
+                <button className="CalculatorForm-button active"> Male </button>
                 <button className="CalculatorForm-button"> Female </button>
             </div>
             <div className="CalculatorForm-container">
