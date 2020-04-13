@@ -34,17 +34,17 @@ it("should render two Radio Buttons", () => {
   act(() => {
     render(
       <div>
-        <RadioButton label="Select" name="activityLevel" />
-        <RadioButton label="Select" name="activityLevel" />
+        <RadioButton label="Male" name="activityLevel" />
+        <RadioButton label="Female" name="activityLevel" />
       </div>,
       container
     );
   });
   expect(pretty(container.innerHTML)).toMatchInlineSnapshot(`
     "<div><label class=\\"RadioButton\\"><input type=\\"radio\\" name=\\"activityLevel\\"><span class=\\"RadioButton-checkmark\\"></span>
-        <div class=\\"RadioButton-label\\">Select</div>
+        <div class=\\"RadioButton-label\\">Male</div>
       </label><label class=\\"RadioButton\\"><input type=\\"radio\\" name=\\"activityLevel\\"><span class=\\"RadioButton-checkmark\\"></span>
-        <div class=\\"RadioButton-label\\">Select</div>
+        <div class=\\"RadioButton-label\\">Female</div>
       </label></div>"
   `);
 });
