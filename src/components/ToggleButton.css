@@ -1,0 +1,27 @@
+.ToggleButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    border: 0;
+    background-color: #ea6f27;
+    color: #983d05;
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+    flex-grow: 1;
+    margin-right: 10px;
+    min-width: 100px;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ToggleButton.active{
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+    background-color: #000000;
+    color: #fff;
+}
+
+.ToggleButton-input{
+    display: none;
+}
