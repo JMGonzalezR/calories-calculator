@@ -11,7 +11,7 @@ function ToggleButton(props) {
     
     <input className="ToggleButton-input" name={props.name} type={props.type} value={props.value} checked={props.isSelected} onChange={props.onChange}>
     </input>
-    {props.children} </label>
+    {props.children}</label>
   );
 }
 
