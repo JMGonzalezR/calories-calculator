@@ -4,7 +4,10 @@ import './RadioButton';
 import RadioButton from './RadioButton';
 import ToggleButton from './ToggleButton'
 
-function CalculatorForm() {
+function CalculatorForm({
+    setResult,
+    setHasResult
+}) {
 
     const [genderSelected, setGender] = useState('male');
     const [activityLevelSelected, setActivityLevel] = useState(1.2);
@@ -45,6 +48,8 @@ function CalculatorForm() {
         }
         
         const dailyCalories = bmr * activityLevelSelected;
+        setHasResult(true);
+        setResult(dailyCalories);
         console.log(dailyCalories)
        
     }

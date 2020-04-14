@@ -48,6 +48,7 @@
     border: 1px solid #dc661c;
     background-color: #f57d34;
     border-radius: 25px;
+    width: 100px;
 }
 
 .CalculatorForm-activityLevelText{

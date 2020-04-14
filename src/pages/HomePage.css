@@ -24,3 +24,23 @@
     width: 50%;
     display: flex;
 }
+
+.Home-h4{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
+    margin-bottom: 15px;
+    font-weight: 400;
+
+}
+
+.Home-result{
+    font-weight: bolder;
+    font-size: 3.5vw;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Home-resultText{
+    margin-top: 0;
+   
+}
