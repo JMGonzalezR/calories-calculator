@@ -21,7 +21,7 @@ function HomePage() {
         {parseInt(result)} kcal
       </h1>
       <p className="Home-resultText">
-        Suggested amount of calories <b>per day</b>.
+        Suggested amount of calories <b>per day</b> to achieve the goal.
       </p>
     </div>
     </div>

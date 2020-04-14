@@ -11,7 +11,7 @@ function CalculatorForm({
 
     const [genderSelected, setGender] = useState('male');
     const [activityLevelSelected, setActivityLevel] = useState(1.2);
-    const [goalsSelected, setGoals] = useState('lose');
+    const [goalsSelected, setGoals] = useState(-3500);
     const [age, setAge] = useState(0);
     const [weight, setWeight] = useState(0);
     const [height, setHeight] = useState(0);
@@ -33,7 +33,7 @@ function CalculatorForm({
     }
 
     function goalsChangeHandler(e) {
-        setGoals(e.target.value)
+        setGoals(parseInt(e.target.value))
     }
 
     function onClickCalculate(){
@@ -47,11 +47,10 @@ function CalculatorForm({
             bmr = 655 +(4.3 * weight) + (4.7 * height) - (4.7 * age)
         }
         
-        const dailyCalories = bmr * activityLevelSelected;
+        const dailyCalories = bmr * activityLevelSelected; //to maintain
+        const dailyCaloriesGoals = ((dailyCalories *7) + goalsSelected) / 7;
         setHasResult(true);
-        setResult(dailyCalories);
-        console.log(dailyCalories)
-       
+        setResult(dailyCaloriesGoals);
     }
 
     return (
@@ -63,8 +62,8 @@ function CalculatorForm({
             </div>
             <div className="CalculatorForm-container">
                 <input type="number" className="CalculatorForm-textinput" placeholder="Age" onChange={(e)=> setAge(e.target.value)}/>
-                <input type="number" className="CalculatorForm-textinput" placeholder="Weight" onChange={(e)=> setWeight(e.target.value)}/>
-                <input type="number" className="CalculatorForm-textinput" placeholder="Height" onChange={(e)=> setHeight(e.target.value)}/>
+                <input type="number" className="CalculatorForm-textinput" placeholder="Weight Lbs" onChange={(e)=> setWeight(e.target.value)}/>
+                <input type="number" className="CalculatorForm-textinput" placeholder="Height In" onChange={(e)=> setHeight(e.target.value)}/>
             </div>
             <h4 className="CalculatorForm-h4">Activity Level</h4>
             <p className="CalculatorForm-activityLevelText">{optionsActivityLevelText[activityLevelSelected]}</p>
@@ -79,10 +78,10 @@ function CalculatorForm({
             </div>
             <h4 className="CalculatorForm-h4">Goals</h4>
             <div className="CalculatorForm-container">
-                <ToggleButton type="radio" name="goals" value="lose" isSelected={goalsSelected === "lose"} onChange={goalsChangeHandler}>Lose</ToggleButton>
-                <ToggleButton type="radio" name="goals" value="lose10%" isSelected={goalsSelected === "lose10%"} onChange={goalsChangeHandler}>Lose 10%</ToggleButton>
-                <ToggleButton type="radio" name="goals" value="maintain" isSelected={goalsSelected === "maintain"} onChange={goalsChangeHandler}>Maintain</ToggleButton>
-                <ToggleButton type="radio" name="goals" value="gain" isSelected={goalsSelected === "gain"} onChange={goalsChangeHandler}>Gain</ToggleButton>
+                <ToggleButton type="radio" name="goals" value={-3500} isSelected={goalsSelected === -3500} onChange={goalsChangeHandler}>Lose</ToggleButton>
+                <ToggleButton type="radio" name="goals" value={-2000} isSelected={goalsSelected === -2000} onChange={goalsChangeHandler}>Lose 10%</ToggleButton>
+                <ToggleButton type="radio" name="goals" value={0} isSelected={goalsSelected === 0} onChange={goalsChangeHandler}>Maintain</ToggleButton>
+                <ToggleButton type="radio" name="goals" value={3500} isSelected={goalsSelected === 3500} onChange={goalsChangeHandler}>Gain</ToggleButton>
             </div>
             <div className="CalculatorForm-container">
                 <button className="CalculatorForm-button" onClick={onClickCalculate}> <div className="CalculateButton-label">Calculate </div></button>
